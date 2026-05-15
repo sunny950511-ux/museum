@@ -102,7 +102,7 @@
 .count-control {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .count-control button {
@@ -127,7 +127,7 @@
   text-align: center;
 }
 
-/* 공통 가이드 박스 스타일 (Step 03용) */
+/* 가이드 박스 */
 .guide-box {
   background-color: #f0f7ff;
   border: 2px solid #0056b3;

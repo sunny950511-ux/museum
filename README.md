@@ -1,16 +1,87 @@
-# React + Vite
+# ��️ [국립중앙박물관] 공공기관 웹 접근성 개선 및 리뉴얼 프로젝트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> "와우 멘트 : [국립중앙박물관] 웹 접근성 강화 포트폴리오"
 
-Currently, two official plugins are available:
+## 1. 프로젝트 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **설명:** 고령층 및 IT 취약계층의 디지털 소외를 해결하기 위해 국립중앙박물관의 복잡한 예약 시스템을 리디자인하고, 한국형 웹 콘텐츠 접근성 지침(KWCAG)을 준수하여 개발한 리뉴얼 프로젝트
+- **진행 기간:** 2026.04.10 ~ 2026.05.15
+- **개발 인원:** 개인 프로젝트 (기여도 100%)
 
-## React Compiler
+## 2. 배포 및 관련 링크
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Live Demo:** https://sunny950511-ux.github.io/museum/
+- **GitHub Repository:** https://github.com/sunny950511-ux/museum
+- **Design (Figma):** https://www.figma.com/design/DxjuKOxdy13xegJxIXxLda/%EA%B3%B5%EA%B3%B5%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%9C%EC%84%A0?node-id=33-164&m=dev
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 3. 사용 기술 스택
+
+### Frontend
+
+- **React.js & Vite:** 컴포넌트 기반 개발로 복잡한 예약 시스템의 유지보수성을 높이고, 빠른 응답 속도를 구현하기 위해 사용
+
+### Design & Tools
+
+- **Figma:** 디자인 시스템과 컴포넌트 라이브러리(Slots, Variants)를 구축하여 WCAG 표준을 준수하는 UI 설계 및 프로토타이핑 수행
+- **Lighthouse:** 웹 접근성 진단 및 품질 지표 측정을 위한 도구 활용
+
+### AI-Assisted Development (Vibe Coding)
+
+- **Google Gemini / Antigravity:** 시맨틱 마크업 검토, ARIA 속성 최적화, 스크린 리더 호환 로직 리팩토링을 위한 페어 프로그래밍 도구로 활용
+- **AI 활용 목표:** 복잡한 공공기관의 정보 구조를 논리적인 접근성 표준에 맞춰 빠르게 재구성하고 오류를 사전에 방지
+
+---
+
+## 4. 사용자 작업 흐름
+
+**주요 과업: 관람 예약 최적화 프로세스**
+
+1. 메인 페이지 진입: 스크롤 없이 최상단(Hero Section)에서 시각화된 '예약하기' 버튼 즉각 발견
+2. 예약 액션: 최소 44x44px 이상의 타겟 사이즈가 확보된 버튼을 클릭하여 예약 레이어 팝업 호출
+3. 전시 선택: 가독성이 높은 카드 UI를 통해 '어린이 박물관' 등 원하는 전시 선택
+4. 일정 설정: 명도 대비 4.5:1 이상의 시인성 높은 달력 UI에서 날짜 및 회차 선택
+5. 완료 및 확인: 예약 완료 후 명확한 시각적 피드백(알림창)을 통해 성공 여부 인지
+
+---
+
+## 5. AI 활용 및 개발 워크플로우 (Vibe Coding)
+
+생성형 AI를 적극적으로 활용하여 접근성 표준 준수 효율을 극대화했습니다.
+
+- **초기 구조 설계:** KWCAG 지침을 프롬프트에 반영하여, 시맨틱 태그(header, main, footer, section 등) 중심의 뼈대를 Antigravity를 통해 생성
+- **코드 리팩토링:** 기존 텍스트 링크 방식의 구조를 AI 피드백을 거쳐 접근성이 강화된 'Solid Button' 타입과 레이어 팝업 컴포넌트로 자동 변환 및 최적화
+- **접근성 자동 검사:** 작성된 컴포넌트의 명도 대비(Color Contrast)와 대체 텍스트 적절성을 AI로 1차 검증하여 개발 시간 단축
+
+---
+
+## 6. 핵심 구현 기능
+
+- **웹 접근성 표준 준수:** 44x44px 이상의 클릭 타겟 확보, 4.5:1 이상의 명도 대비 유지 등 고령층 및 시각 장애인을 위한 인터페이스 강화
+- **반응형 웹 디자인(RWD):** 모바일 및 다양한 기기 환경에서도 유연하게 작동하는 그리드 시스템과 고대비 모드(High Contrast) 지원
+- **예약 경험 최적화(UX):** '예약하기' 버튼을 히어로 섹션에 배치하고, 원스톱 레이어 팝업 시스템을 통해 단계별 이탈 요소 최소화
+
+---
+
+## 7. 디렉토리 구조
+
+```text
+src
+├── assets          # 접근성 체크리스트 및 이미지 자산
+├── components      # ReservationButton, ReservationPopup, SkipNav 등 공통 컴포넌트
+├── pages           # Home(Main), Booking 등 화면 단위 페이지
+├── styles          # 고대비 테마 및 가독성 중심 타이포그래피 스타일
+├── App.jsx         # 라우팅 및 접근성 Provider 설정
+└── index.js        # React 앱 진입점
+```
+
+---
+
+## 8. 회고 및 인사이트
+
+**[기술보다 중요한 배려, 웹 접근성]**
+버튼인지조차 알기 힘들었던 기존의 숨겨진 텍스트 링크를 명확한 브랜드 컬러 버튼으로 개선하며, 디자인이 곧 사용자의 여정을 돕는 가장 강력한 이정표임을 배웠습니다.
+
+**[AI와의 협업, Vibe Coding의 가능성]**
+AI로 코드를 구현하며 단순 코딩 시간은 줄이고, 대신 '사용자 경험 설계'와 '접근성 표준 검증'이라는 핵심 가치에 100% 집중할 수 있었습니다.
