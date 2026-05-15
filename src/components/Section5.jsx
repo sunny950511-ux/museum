@@ -73,19 +73,6 @@ function Section5() {
             <h2 id="online-title" className="online-title">온라인 전시관</h2>
           </div>
 
-          <div className="online-header-nav">
-            <button type="button" className="nav-btn" onClick={handlePrev} aria-label="이전 전시">
-              &lt;
-            </button>
-            <span className="page-indicator">
-              <span className="current">{currentIndex + 1}</span> / {totalPages}
-            </span>
-            <button type="button" className="nav-btn" onClick={handleNext} aria-label="다음 전시">
-              &gt;
-            </button>
-          </div>
-        </div>
-
         <div className="online-carousel-container">
           <div className="online-carousel-wrapper" ref={scrollRef} role="region" aria-label="온라인 전시관 리스트">
             {exhibitions.map((item) => (
@@ -103,6 +90,18 @@ function Section5() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="online-header-nav">
+          <button type="button" className="nav-btn" onClick={handlePrev} aria-label="이전 전시">
+            &lt;
+          </button>
+          <span className="page-indicator">
+            <span className="current">{currentIndex + 1}</span> / {totalPages}
+          </span>
+          <button type="button" className="nav-btn" onClick={handleNext} aria-label="다음 전시">
+            &gt;
+          </button>
         </div>
       </div>
     </section>

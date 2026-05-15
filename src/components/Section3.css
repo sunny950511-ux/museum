@@ -60,8 +60,15 @@
 }
 
 .news-title {
-  font: var(--font-h1);
+  font-size: 24px;
+  font-weight: 700;
   color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .news-title {
+    font-size: 32px;
+  }
 }
 
 .news-tabs {
@@ -74,8 +81,9 @@
 }
 
 .news-tab {
-  padding: 6px 20px;
-  font: var(--font-h2);
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--color-text-tertiary);
   background: none;
   border: none;

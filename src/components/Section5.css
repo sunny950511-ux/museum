@@ -1,4 +1,4 @@
-/* Section5.css - 온라인 전시관 가로 스크롤 캐러셀 */
+/* Section5.css -  전시관 가로 스크롤 캐러셀 */
 .section-online {
   padding: 60px 20px 100px 20px;
   background-color: var(--color-white);
@@ -45,18 +45,28 @@
 }
 
 .online-title {
-  font: var(--font-h1);
+  font-size: 24px;
+  font-weight: 700;
   color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .online-title {
+    font-size: 32px;
+  }
 }
 
 /* 상단 네비게이션 */
 .online-header-nav {
   display: flex;
   align-items: center;
+  justify-content: center; /* 중앙 정렬 추가 */
   gap: 16px;
   background-color: var(--color-bg-light);
   padding: 8px 16px;
   border-radius: 30px;
+  width: fit-content; /* 너비 조절 */
+  margin: 0 auto; /* 중앙 정렬 */
 }
 
 .nav-btn {
