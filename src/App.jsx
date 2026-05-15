@@ -15,7 +15,7 @@ import NavMenu from './components/NavMenu';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app-container">
         <a href="#main-content" className="sr-only focus-visible:not-sr-only skip-link">
           본문 바로가기
