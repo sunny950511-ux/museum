@@ -83,7 +83,7 @@ const Step04Confirmation = ({
         </section>
       </div>
 
-      <div className="step-actions fixed-bottom-actions">
+      <div className="confirmation-actions fixed-bottom-actions">
         <button type="button" className="btn-prev" onClick={onPrev}>이전으로</button>
         <button type="button" className="btn-confirm" onClick={handleConfirm}>예약 확정하기</button>
       </div>

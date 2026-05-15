@@ -174,7 +174,7 @@
 
 /* 하단 버튼 */
 .step-actions {
-  display: flex !important;
+  display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
