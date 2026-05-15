@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Step04Confirmation.css';
 
 const Step04Confirmation = ({ 
@@ -8,6 +8,15 @@ const Step04Confirmation = ({
   onPrev,
   onNext
 }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isDesktopOrTablet = windowWidth >= 768;
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleConfirm = () => {
     // 실제 서버 연동 시 API 호출 및 메시지 발송이 일어나는 부분
     alert(`[발송 완료] ${visitorInfo.phone} 번호로 예약 확정 알림톡이 발송되었습니다.`);
@@ -26,7 +35,7 @@ const Step04Confirmation = ({
   };
 
   return (
-    <div className="step-confirmation-container mobile-view">
+    <div className={`step-confirmation-container ${isDesktopOrTablet ? 'desktop-view' : 'mobile-view'}`}>
       <section className="confirmation-header">
         <h2 className="confirmation-title">
           <span className="exhibition-prefix">[{exhibition?.title}]</span>
