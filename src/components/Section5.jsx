@@ -72,6 +72,7 @@ function Section5() {
             </svg>
             <h2 id="online-title" className="online-title">온라인 전시관</h2>
           </div>
+        </div>
 
         <div className="online-carousel-container">
           <div className="online-carousel-wrapper" ref={scrollRef} role="region" aria-label="온라인 전시관 리스트">
