@@ -141,10 +141,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f7ff;
   border-radius: var(--radius-sm);
+  background-color: #f1f5f9; /* 아이콘 배경색 추가 */
   color: var(--color-primary);
-  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.booking-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  /* 선 굵기가 얇아 보이는 경우를 위해 미세한 대비 조정 */
+  filter: contrast(1.1) brightness(0.95);
 }
 
 .exhibition-name {
