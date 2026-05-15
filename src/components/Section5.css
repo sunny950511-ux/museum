@@ -1,0 +1,213 @@
+/* Section5.css - 온라인 전시관 가로 스크롤 캐러셀 */
+.section-online {
+  padding: 60px 20px 100px 20px;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.online-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .section-online {
+    padding: 80px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-online {
+    padding: 100px 40px; /* 좌우 여백 추가하여 통일 */
+  }
+}
+
+.online-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.online-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.online-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.online-title {
+  font: var(--font-h1);
+  color: var(--color-text-primary);
+}
+
+/* 상단 네비게이션 */
+.online-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-bg-light);
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0 4px;
+  transition: opacity 0.2s;
+}
+
+.nav-btn:hover {
+  opacity: 0.6;
+}
+
+.page-indicator {
+  font: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  min-width: 45px;
+  text-align: center;
+}
+
+.page-indicator .current {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* 캐러셀 영역 */
+.online-carousel-container {
+  width: 100%;
+}
+
+.online-carousel-wrapper {
+  display: flex;
+  gap: 0; /* 페이지 단위 이동을 위해 간격 0 (아이템 내 여백으로 조절) */
+  overflow-x: hidden; /* 스크롤바 완전 제거 */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 개별 아이템 */
+.online-item {
+  flex: 0 0 100%; /* 페이지 단위 이동 (1번에 1개) */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .online-item {
+    flex: 0 0 50%; /* 태블릿: 1화면에 2개 */
+    padding: 0 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .online-item {
+    flex: 0 0 33.333%; /* 데스크탑: 1화면에 3개 */
+    padding: 0 12px;
+  }
+}
+
+/* 이미지 스타일 */
+.online-image-link {
+  display: block;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.online-image-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.online-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+}
+
+.online-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.online-image-link:hover .online-image {
+  transform: scale(1.05);
+}
+
+/* 전시 제목 */
+.online-exhibition-title {
+  font: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
+  padding: 0 8px;
+  /* 텍스트가 너무 길면 두 줄까지 허용 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+  height: 2.8em;
+}
+
+/* 네비게이션 버튼 (그리드로 변경되어 필요 없음) */
+.online-nav-overlay {
+  display: none;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.online-item {
+  animation: fadeInUp 0.6s ease backwards;
+}
+
+.online-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.online-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.online-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.online-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.online-item:nth-child(5) {
+  animation-delay: 0.5s;
+}

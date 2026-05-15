@@ -1,0 +1,143 @@
+/* Section3.css - 알립니다 (공지사항) */
+.section-news {
+  padding: 60px 20px 80px 20px; /* 기본 여백 확대 */
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.news-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .section-news {
+    padding: 80px 40px;
+  }
+
+  .news-tabs {
+    overflow-x: visible; /* 스크롤 해제 */
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .news-link {
+    padding: 18px 12px; /* 태블릿에서 간격 확대 */
+  }
+}
+
+@media (min-width: 1440px) {
+  .news-container {
+    padding: 0 40px;
+  }
+
+  .section-news {
+    padding: 100px 0; /* 좌우 여백 추가하여 통일 */
+  }
+
+  .news-link {
+    padding: 24px 16px;
+  }
+}
+
+.news-item-title {
+  font-size: 18px; /* 데스크톱에서 폰트 크기 확대 */
+}
+
+.news-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-icon {
+  color: var(--color-text-primary);
+}
+
+.news-title {
+  font: var(--font-h1);
+  color: var(--color-text-primary);
+}
+
+.news-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--color-border-light);
+  margin-bottom: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.news-tab {
+  padding: 6px 20px;
+  font: var(--font-h2);
+  color: var(--color-text-tertiary);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  /* margin-bottom: -2px; */
+  min-height: 44px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.news-tab:hover {
+  color: var(--color-text-primary);
+}
+
+.news-tab.active {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8px;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  min-height: 48px;
+  gap: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.news-link:hover,
+.news-link:focus-visible {
+  background-color: var(--color-bg-light);
+}
+
+.news-item-title {
+  font: var(--font-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.news-item-date {
+  font: var(--font-caption);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}

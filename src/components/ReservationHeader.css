@@ -1,0 +1,125 @@
+.reservation-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f3f4f6;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px; /* 높이 약간 조절 */
+}
+
+.header-title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05); /* 살짝 커지는 효과 */
+  opacity: 0.8;
+}
+
+.header-logo {
+  height: 48px; /* 로고 사이즈 2배 확대 (24px -> 48px) */
+  width: auto;
+  object-fit: contain;
+}
+
+.header-title {
+  font-size: 21px; /* 글씨 크기 키움 (18px -> 21px) */
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.close-button:hover {
+  opacity: 0.7;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  gap: 12px;
+}
+
+.step-indicator {
+  font-size: 16px;
+  font-weight: 700;
+  color: #008485;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+.progress-bar {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+}
+
+.progress-segment {
+  height: 6px;
+  flex: 1;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  position: relative; /* 가상 요소 기준점 */
+}
+
+/* 실제 클릭 가능한 영역을 위아래로 20px씩 확장 */
+.progress-segment::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+}
+
+.progress-segment.active {
+  background-color: #008485;
+}
+
+.progress-segment.clickable {
+  cursor: pointer;
+}
+
+.progress-segment.clickable:hover {
+  opacity: 0.8;
+  background-color: #00a0a1;
+}
+
+.progress-segment:not(.clickable) {
+  cursor: not-allowed;
+}

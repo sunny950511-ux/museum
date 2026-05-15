@@ -1,0 +1,183 @@
+/* Section4.css - 행사 가로 스크롤 캐러셀 */
+.section-events {
+  padding: 60px 20px 80px 20px;
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.events-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .section-events {
+    padding: 80px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-events {
+    padding: 100px 40px; /* 좌우 여백 추가하여 통일 */
+  }
+}
+
+.events-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.events-icon {
+  color: var(--color-text-primary);
+}
+
+.events-title {
+  font: var(--font-h1);
+  color: var(--color-text-primary);
+}
+
+.events-list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 스크롤바 커스텀 스타일 */
+.events-list::-webkit-scrollbar {
+  height: 12px;
+}
+.events-list::-webkit-scrollbar-track {
+  background: var(--color-border-light);
+  border-radius: 4px;
+}
+.events-list::-webkit-scrollbar-thumb {
+  background: var(--color-border-dark);
+  border-radius: 4px;
+  min-width: 40px;
+}
+.events-list::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+.event-item {
+  flex: 0 0 140px; /* 고정 너비 */
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .event-item {
+    flex: 0 0 180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .event-item {
+    flex: 0 0 220px; /* 데스크톱에서 너비 확장 */
+  }
+}
+
+.event-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.event-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* 이미지 래퍼: 고정 크기로 모든 카드 통일 */
+.event-image-wrap {
+  width: 140px;
+  height: 175px; /* 4:5 비율 고정 */
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-border-light);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .event-image-wrap {
+    width: 180px;
+    height: 225px;
+  }
+  /* 이미지 너비 변경에 맞춰 텍스트 말줄임 기준도 함께 조정 */
+  .event-info {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .event-image-wrap {
+    width: 220px;
+    height: 275px;
+  }
+  .event-info {
+    width: 220px;
+  }
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 잘라서 동일 비율 유지 */
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.event-link:hover .event-image,
+.event-link:focus-visible .event-image {
+  transform: scale(1.05);
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  /* 이미지 너비와 동일하게 고정 → 말줄임 기준 */
+  width: 140px;
+  overflow: hidden;
+}
+
+.event-category {
+  font: var(--font-caption);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.event-name {
+  font: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.event-period {
+  font: var(--font-tiny);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

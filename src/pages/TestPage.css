@@ -1,0 +1,64 @@
+.test-page {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  padding: 20px;
+}
+
+.test-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.test-content {
+  padding: 60px 40px;
+  background: var(--color-bg-light);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.test-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  color: var(--color-primary);
+}
+
+.test-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+}
+
+.test-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  margin-bottom: 40px;
+}
+
+.test-back-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.test-back-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.test-back-btn:active {
+  transform: translateY(0);
+}

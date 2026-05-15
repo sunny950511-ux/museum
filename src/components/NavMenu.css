@@ -1,0 +1,86 @@
+.main-nav-menu {
+  width: 100%;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-light);
+  display: block; /* 기본적으로 보이게 설정 (모바일 대응은 차후 세밀화) */
+  position: relative;
+  z-index: 9; /* 헤더(10)보다는 낮고 히어로보다는 높게 */
+}
+
+@media (max-width: 767px) {
+  .main-nav-menu {
+    display: none; /* 모바일에서는 여전히 숨김 처리 */
+  }
+}
+
+.nav-menu-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nav-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px; /* height 대신 min-height로 안전성 확보 */
+}
+
+@media (min-width: 1440px) {
+  .nav-menu-list {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .nav-menu-list {
+    padding: 0 40px;
+  }
+}
+
+.nav-menu-item {
+  flex: 0 0 auto;
+}
+
+.nav-menu-link {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+  transition: all 0.2s ease;
+  letter-spacing: -0.5px;
+}
+
+/* 하단 강조 라인 */
+.nav-menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* 테두리와 겹치게 */
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-menu-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-menu-link:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .nav-menu-link {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+}

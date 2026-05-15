@@ -1,0 +1,90 @@
+/* Section2.css - 관람시간 / 입장료 안내 (가로 정렬 리팩토링) */
+.section-info {
+  background-color: var(--color-bg-light);
+  padding: 40px 20px;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.info-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .section-info {
+    padding: 30px 40px; /* 세로 높이를 줄여서 메뉴바처럼 깔끔하게 변경 */
+  }
+
+  .info-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px; /* 항목 간 간격 최적화 */
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-info {
+    padding: 35px 0; /* 좌우 여백 추가하여 통일 */
+  }
+
+  .info-container {
+    padding: 0 40px;
+    gap: 120px;
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: row; /* 텍스트들도 가로로 배치하여 그리드 느낌 제거 */
+  align-items: baseline;
+  gap: 16px;
+}
+
+.info-title {
+  font: var(--font-h2);
+  font-size: 18px;
+  color: var(--color-primary); /* 강조 색상 적용 */
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.info-desc-group {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.info-desc {
+  font: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+/* 항목 사이 구분선 (태블릿 이상) */
+@media (min-width: 768px) {
+  .info-block + .info-block {
+    position: relative;
+    padding-left: 80px;
+  }
+
+  .info-block + .info-block::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background-color: var(--color-border-dark);
+  }
+}

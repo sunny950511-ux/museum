@@ -1,0 +1,93 @@
+.section-management-system {
+  padding: 60px 20px;
+  background-color: #fff;
+  padding-top: 100px;
+  text-align: left;
+}
+
+.mgmt-list-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-management-system {
+    padding: 80px 40px;
+    padding-top: 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-management-system {
+    padding: 100px 0; /* 좌우 패딩 제거하여 Hero 이미지 라인에 맞춤 */
+    padding-top: 140px;
+  }
+}
+
+.mgmt-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.mgmt-main-link {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+
+.mgmt-main-link:hover {
+  opacity: 0.6;
+}
+
+.mgmt-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* 모바일 1열 */
+  gap: 0 40px;
+}
+
+@media (min-width: 768px) {
+  .mgmt-link-list {
+    grid-template-columns: repeat(2, 1fr); /* 태블릿 2열 */
+  }
+}
+
+@media (min-width: 1200px) {
+  .mgmt-link-list {
+    grid-template-columns: repeat(3, 1fr); /* 데스크톱 3열로 확장하여 오른쪽 여백 활용 */
+    max-width: 100%;
+  }
+}
+
+.mgmt-link-item {
+  border-bottom: 1.5px solid #000;
+}
+
+.mgmt-link-anchor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0 10px 0;
+  text-decoration: none;
+  color: #000;
+  transition: opacity 0.2s;
+}
+
+.mgmt-link-anchor:hover {
+  opacity: 0.6;
+}
+
+.mgmt-link-text {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.mgmt-arrow-icon {
+  color: #000;
+}

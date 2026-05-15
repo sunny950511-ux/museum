@@ -1,0 +1,91 @@
+.footer {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 80px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 100px 60px;
+  }
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 50px;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-sns a {
+  color: #000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+  justify-content: center; /* 추가: 가로축 기준 중앙 정렬 */
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-links a.bold-link {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-address {
+  font-style: normal;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-address p {
+  margin: 0;
+}
+
+/* src/components/Footer.css */
+
+/* 기존 .footer-sns a 코드는 유지하되 font-size는 삭제해도 됩니다. */
+.footer-sns {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center; /* 수정: space-between 대신 center로 변경 */
+}
+
+/* 새로 추가하는 img 태그용 스타일 */
+.sns-icon {
+  width: 24px; /* 피그마 디자인 크기에 맞춤 */
+  height: 24px;
+  display: block;
+  object-fit: contain; /* 아이콘 비율 유지 */
+}

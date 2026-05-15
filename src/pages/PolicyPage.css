@@ -1,0 +1,124 @@
+.policy-page {
+  background-color: var(--color-white);
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+.policy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--color-border-light);
+}
+
+.policy-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.policy-date {
+  font-size: 16px;
+  color: var(--color-text-tertiary);
+}
+
+.policy-content {
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.policy-intro {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  padding: 24px;
+  background-color: var(--color-bg-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.policy-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 24px;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+.policy-text {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.policy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.policy-footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+.btn-back-home {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-back-home:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .policy-page {
+    padding: 60px 16px;
+  }
+  
+  .policy-header {
+    margin-bottom: 40px;
+  }
+}

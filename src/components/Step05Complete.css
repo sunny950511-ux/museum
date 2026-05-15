@@ -1,0 +1,173 @@
+.step-complete-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.complete-icon-wrapper {
+  margin-bottom: 24px;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.complete-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.03em;
+}
+
+.complete-desc {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+  word-break: keep-all;
+}
+
+.complete-desc strong {
+  color: #003366;
+  font-weight: 700;
+}
+
+.complete-summary-box {
+  width: 100%;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.summary-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.summary-info {
+  font-size: 16px;
+  color: #374151;
+  margin: 0 0 8px 0;
+}
+
+.summary-info:last-child {
+  margin-bottom: 0;
+}
+
+.summary-info strong {
+  color: #6b7280;
+  font-weight: 600;
+  display: inline-block;
+  width: 50px;
+}
+
+.complete-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.btn-check,
+.btn-cancel {
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-check {
+  background: #003366;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-check:hover {
+  background: #002244;
+}
+
+.btn-cancel {
+  background: #ffffff;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-cancel:hover {
+  background: #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .step-complete-container {
+    max-width: 800px;
+    padding-top: 100px;
+  }
+
+  .complete-icon-wrapper svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .complete-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .complete-desc {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  .complete-summary-box {
+    padding: 32px 40px;
+    margin-bottom: 60px;
+  }
+
+  .summary-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .summary-info-group {
+    display: flex;
+    gap: 40px;
+  }
+
+  .summary-info {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .complete-actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .btn-check,
+  .btn-cancel {
+    height: 64px;
+    font-size: 20px;
+  }
+}

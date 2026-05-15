@@ -1,0 +1,154 @@
+.step01-exhibition {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.booking-intro {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.section-desc {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.exhibition-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 160px; /* 하단 회색 여백 */
+}
+
+/* 데스크톱 및 태블릿 그리드 레이아웃 (768px 이상) */
+@media (min-width: 768px) {
+  .exhibition-card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .exhibition-card.premium {
+    height: auto;
+    aspect-ratio: 3 / 4; /* 데스크톱에서는 찌그러지지 않도록 포스터 비율 유지 */
+  }
+}
+
+.exhibition-card.premium {
+  position: relative;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  z-index: 1;
+}
+
+.exhibition-card.premium:hover .card-bg-image {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.card-content > * {
+  pointer-events: auto;
+}
+
+.card-info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title-main {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-location {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.02em;
+}
+
+.card-info-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.more-btn {
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 26px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.more-btn:hover {
+  background-color: #004a94;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}

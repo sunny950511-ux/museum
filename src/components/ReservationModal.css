@@ -1,0 +1,244 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.modal-title {
+  font: var(--font-h2);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.btn-close {
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: var(--color-bg-light);
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Step Components 공통 스타일 */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-title {
+  font: var(--font-body);
+  color: var(--color-text-secondary);
+  margin-bottom: 16px; /* 인라인 스타일에서 이동 */
+}
+
+/* ... existing step actions ... */
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.step-actions.center {
+  justify-content: center;
+  margin-top: 40px;
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ... existing btn ... */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font: var(--font-body);
+  padding: 0 24px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+  font-weight: 700;
+}
+
+.btn-primary.wide {
+  min-width: 200px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #002244;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-border-dark);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-primary);
+  font: var(--font-body);
+  padding: 0 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-dark);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-border-light);
+}
+
+/* 카드 라디오 디자인 (전시, 날짜, 시간 선택용) */
+.radio-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.radio-card-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-card-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-card-content {
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-card-content.small {
+  min-height: 60px; /* StepDateTime에서 사용 */
+}
+
+.radio-card-title {
+  font: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.radio-card-desc {
+  font: var(--font-caption);
+  color: var(--color-text-tertiary);
+  margin-top: 8px;
+}
+
+.radio-card-input:checked + .radio-card-content {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 51, 102, 0.05);
+}
+
+.radio-card-input:focus-visible + .radio-card-content {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.radio-card-input:disabled + .radio-card-content {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-bg-light);
+}
+
+/* StepDateTime 특화 */
+.step-section {
+  margin-top: 24px;
+}
+
+/* StepConfirm 특화 */
+.confirm-box {
+  background-color: var(--color-bg-light);
+  padding: 24px;
+  border-radius: var(--radius-sm);
+}
+
+.confirm-list {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  margin: 0;
+}
+
+.confirm-term {
+  color: var(--color-text-secondary);
+  font: var(--font-caption);
+}
+
+.confirm-desc {
+  color: var(--color-text-primary);
+  font: var(--font-body);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* StepComplete 특화 */
+.step-container.center {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.success-icon {
+  margin: 0 auto 24px auto;
+  display: block;
+}
+
+.success-title {
+  font: var(--font-h2);
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.success-message {
+  font: var(--font-body);
+  color: var(--color-text-secondary);
+}
