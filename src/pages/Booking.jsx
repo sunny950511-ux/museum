@@ -28,10 +28,10 @@ function Booking() {
     {
       id: 2,
       type: 'special',
-      name: 'VR체험 예약(디지털 실감 영상관 2)',
+      name: '특별 전시 관람 예약',
       icon: <img src={icon2} alt="" className="booking-icon" />,
       path: '/booking/special',
-      description: '가상현실(VR) 체험은 인터넷 예약 후 관람하실 수 있습니다. 가상현실(VR) 체험을 제외한 디지털 실감 영상관 콘텐츠는 예약 없이 관람 가능합니다.'
+      description: '오직 지금만 만날 수 있는 특별한 전시, 사전 예약을 통해 기다림 없이 편리하게 감상하세요.'
     },
     {
       id: 3,
@@ -52,10 +52,10 @@ function Booking() {
     {
       id: 5,
       type: 'commentary',
-      name: '전시 해설 예약',
+      name: '상설 전시 관람 예약',
       icon: <img src={icon5} alt="" className="booking-icon" />,
       path: '/booking/commentary',
-      description: '태블릿 PC를 활용한 스마트 큐레이터, 야외 전시해설 등 테마형 전시 관람 안내 서비스를 제공하고 있습니다.'
+      description: '언제나 열려있는 다채로운 상설 전시, 온라인 사전 예약을 통해 현장 발권의 번거로움 없이 여유롭게 만나보세요.'
     },
     {
       id: 6,
