@@ -10,12 +10,12 @@ function BookingSearch() {
   return (
     <div className="booking-search-container">
       <form className="booking-search-form" onSubmit={handleSubmit} role="search">
-        <div className="search-input-wrapper">
+        <div className="booking-search-input-wrapper">
           <label htmlFor="booking-search" className="sr-only">전시 검색어 입력</label>
           <input 
             type="text" 
             id="booking-search" 
-            className="search-input" 
+            className="booking-search-input" 
             placeholder="검색어를 입력해주세요." 
           />
         </div>

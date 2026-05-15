@@ -22,17 +22,19 @@
   box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
 }
 
-.search-input-wrapper {
+.booking-search-input-wrapper {
   flex: 1;
   display: flex;
   align-items: center;
+  border: none;
+  padding: 0;
 }
 
-.booking-search-form .search-input {
+.booking-search-input {
   width: 100%;
   border: none;
   background: transparent;
-  font-size: 18px;
+  font-size: 20px; /* 더 자연스럽게 크기 상향 */
   font-weight: 500;
   color: var(--color-text-primary);
   outline: none;
@@ -40,9 +42,9 @@
   box-shadow: none;
 }
 
-.booking-search-form .search-input::placeholder {
+.booking-search-input::placeholder {
   color: var(--color-text-tertiary);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .search-actions {
