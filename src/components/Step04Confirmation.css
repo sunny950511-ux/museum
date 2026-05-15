@@ -127,25 +127,27 @@
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
   display: flex;
-  gap: 12px;
+  flex-direction: column; /* 모바일에서 세로 배치 */
+  gap: 10px;
   box-sizing: border-box;
   z-index: 1000;
-  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .fixed-bottom-actions .btn-prev {
-  flex: 1;
-  height: 64px;
+  width: 100%;
+  height: 60px;
   font-size: 18px;
   font-weight: 700;
   background: #f3f4f6;
   border: none;
   border-radius: 12px;
   color: #4b5563;
+  order: 2; /* 이전을 아래로 */
 }
 
 .fixed-bottom-actions .btn-confirm {
-  flex: 2;
+  width: 100%;
   height: 64px;
   font-size: 18px;
   font-weight: 700;
@@ -153,6 +155,7 @@
   border: none;
   border-radius: 12px;
   color: #ffffff;
+  order: 1; /* 확정을 위로 */
 }
 
 @media (min-width: 768px) {
@@ -200,9 +203,12 @@
     box-shadow: none;
     border-top: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 40px;
     background: transparent;
+    display: flex;
+    flex-direction: row; /* 데스크톱에서 가로 배치 */
     justify-content: center;
+    gap: 20px;
   }
 
   .fixed-bottom-actions .btn-prev,
