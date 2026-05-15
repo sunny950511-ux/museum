@@ -42,9 +42,10 @@
 
 .footer-links {
   display: flex;
-  gap: 25px;
+  gap: 15px 25px;
   margin-bottom: 30px;
-  justify-content: center; /* 추가: 가로축 기준 중앙 정렬 */
+  justify-content: center;
+  flex-wrap: wrap; /* 추가: 모바일에서 줄바꿈 허용 */
 }
 
 .footer-links a {

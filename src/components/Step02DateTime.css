@@ -2,48 +2,48 @@
 .step-datetime-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px 160px 20px;
+  padding: 40px 16px 80px 16px;
   display: flex;
   flex-direction: column;
-  gap: 80px !important;
+  gap: 40px !important;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .step-datetime-container {
+    padding: 80px 20px 160px 20px;
+    gap: 80px !important;
+  }
 }
 
 /* 가이드 박스 */
 .guide-box {
   background-color: #f0f7ff;
   border: 2px solid #0056b3;
-  padding: 30px 40px;
+  padding: 20px;
   border-radius: 16px;
   display: flex;
-  align-items: center; /* 아이콘과 텍스트 수직 중앙 */
-  gap: 30px;
+  align-items: flex-start;
+  gap: 15px;
   width: 100%;
   box-sizing: border-box;
 }
-.guide-icon {
-  font-size: 44px;
-  display: flex;
-  align-items: center;
+@media (min-width: 768px) {
+  .guide-box {
+    padding: 30px 40px;
+    align-items: center;
+    gap: 30px;
+  }
 }
-.guide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 2px;
-} /* 미세 수직 보정 */
-.guide-title {
-  font-size: 24px;
-  font-weight: 800;
-  color: #0056b3;
-  margin: 0 0 5px 0;
-  line-height: 1.2;
-}
-.guide-desc {
-  font-size: 20px;
-  color: #333;
-  margin: 0;
-  line-height: 1.4;
+.guide-icon { font-size: 32px; flex-shrink: 0; }
+.guide-content { flex: 1; }
+.guide-title { font-size: 18px; font-weight: 800; color: #0056b3; margin: 0 0 4px 0; }
+.guide-desc { font-size: 15px; color: #333; margin: 0; line-height: 1.4; }
+
+@media (min-width: 768px) {
+  .guide-icon { font-size: 44px; }
+  .guide-title { font-size: 24px; }
+  .guide-desc { font-size: 20px; }
 }
 
 /* 독립 페이지 전용 가이드 박스 여백 (Step 3 등) */
@@ -128,7 +128,7 @@
 
 /* 회차 선택 */
 .exhibition-title-display {
-  font-size: 26px;
+  font-size: clamp(20px, 5vw, 26px);
   font-weight: 800;
   color: #002952;
   margin-bottom: 10px;

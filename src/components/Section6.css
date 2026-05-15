@@ -25,10 +25,16 @@
 }
 
 .mgmt-main-title {
-  font-size: 20px;
+  font-size: clamp(18px, 4vw, 20px);
   font-weight: 800;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .mgmt-main-title {
+    margin-bottom: 60px;
+  }
 }
 
 .mgmt-main-link {

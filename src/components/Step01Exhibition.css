@@ -108,14 +108,12 @@
 }
 
 .card-title-main {
-  font-size: 26px;
+  font-size: clamp(20px, 5vw, 26px);
   font-weight: 800;
   color: #ffffff !important;
   margin: 0;
   line-height: 1.2;
-  text-shadow:
-    2px 2px 4px rgba(0, 0, 0, 0.8),
-    -1px -1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card-location {

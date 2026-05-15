@@ -19,11 +19,13 @@
 
   /* Typography */
   --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-  --font-h1: 700 32px/38px var(--font-family);
-  --font-h2: 700 22px/26px var(--font-family);
-  --font-body: 400 16px/19px var(--font-family);
-  --font-caption: 300 14px/17px var(--font-family);
-  --font-tiny: 300 12px/14px var(--font-family);
+  
+  /* 반응형 폰트 크기 (clamp 사용) */
+  --font-h1: 700 clamp(24px, 5vw, 32px)/1.2 var(--font-family);
+  --font-h2: 700 clamp(18px, 4vw, 22px)/1.2 var(--font-family);
+  --font-body: 400 clamp(14px, 2vw, 16px)/1.4 var(--font-family);
+  --font-caption: 300 clamp(12px, 1.5vw, 14px)/1.4 var(--font-family);
+  --font-tiny: 300 12px/1.4 var(--font-family);
 
   /* Radius */
   --radius-sm: 8px;

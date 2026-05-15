@@ -19,12 +19,18 @@
 }
 
 .confirmation-title {
-  font-size: 24px;
+  font-size: clamp(20px, 4vw, 24px);
   font-weight: 800;
   color: #111827;
   margin: 0;
   line-height: 1.4;
   word-break: keep-all;
+}
+
+@media (min-width: 768px) {
+  .confirmation-title {
+    font-size: 32px;
+  }
 }
 
 .exhibition-prefix {
