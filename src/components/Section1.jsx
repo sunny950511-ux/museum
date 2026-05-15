@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Section1.css';
+import section01_1 from '../assets/section01_1.jpg';
+import section01_2 from '../assets/section01_2.jpg';
+import section01_3 from '../assets/section01_3.jpg';
 
 function Section1() {
   return (
@@ -8,8 +11,8 @@ function Section1() {
       <h2 className="sr-only">추천 전시 섹션</h2>
       <article className="section1-card">
         <img 
-          src="/src/assets/section01_1.jpg" 
-          alt="" 
+          src={section01_1}
+          alt="지금 꼭 봐야할 특별전시 이미지" 
           className="section1-card-bg" 
           aria-hidden="true" 
         />
@@ -30,8 +33,8 @@ function Section1() {
 
       <article className="section1-card">
         <img 
-          src="/src/assets/section01_2.jpg" 
-          alt="" 
+          src={section01_2} 
+          alt="조용히 즐기는 상설전시 이미지" 
           className="section1-card-bg" 
           aria-hidden="true" 
         />
@@ -52,8 +55,8 @@ function Section1() {
 
       <article className="section1-card">
         <img 
-          src="/src/assets/section01_3.jpg" 
-          alt="" 
+          src={section01_3}
+          alt="함께하는 어린이 박물관 이미지" 
           className="section1-card-bg" 
           aria-hidden="true" 
         />

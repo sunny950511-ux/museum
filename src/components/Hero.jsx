@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import './Hero.css';
+import Heroimage from '../assets/Hero Image.jpg';
 
 function Hero() {
   return (
     <section className="hero" aria-label="메인 배너">
       <div className="hero-image-container">
         <img 
-          src="/src/assets/Hero Image.jpg" 
+          src={Heroimage}
           alt="국립중앙박물관 이미지" 
           className="hero-image" 
         />

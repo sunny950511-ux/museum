@@ -1,12 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Section5.css';
+import exhibition1 from '../assets/exhibition1.jpg';
+import exhibition2 from '../assets/exhibition2.jpg';
+import exhibition3 from '../assets/exhibition3.jpg';
+import exhibition4 from '../assets/exhibition4.jpg';
+import exhibition5 from '../assets/exhibition5.jpg';
 
 const exhibitions = [
-  { id: 1, image: '/src/assets/exhibition1.jpg', title: '온라인 전시 1 - 세계 유산의 미' },
-  { id: 2, image: '/src/assets/exhibition2.jpg', title: '온라인 전시 2 - 국립중앙박물관 소장 명품' },
-  { id: 3, image: '/src/assets/exhibition3.jpg', title: '온라인 전시 3 - 고려의 빛, 청자' },
-  { id: 4, image: '/src/assets/exhibition4.jpg', title: '온라인 전시 4 - 조선왕실의 의례' },
-  { id: 5, image: '/src/assets/exhibition5.jpg', title: '온라인 전시 5 - 반가사유상과의 만남' },
+  { id: 1, image: exhibition1, title: '온라인 전시 1 - 세계 유산의 미' },
+  { id: 2, image: exhibition2, title: '온라인 전시 2 - 국립중앙박물관 소장 명품' },
+  { id: 3, image: exhibition3, title: '온라인 전시 3 - 고려의 빛, 청자' },
+  { id: 4, image: exhibition4, title: '온라인 전시 4 - 조선왕실의 의례' },
+  { id: 5, image: exhibition5, title: '온라인 전시 5 - 반가사유상과의 만남' },
 ];
 
 function Section5() {
