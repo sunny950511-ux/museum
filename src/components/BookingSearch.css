@@ -28,20 +28,21 @@
   align-items: center;
 }
 
-.search-input {
+.booking-search-form .search-input {
   width: 100%;
   border: none;
   background: transparent;
-  font: var(--font-body);
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 500;
   color: var(--color-text-primary);
   outline: none;
-  padding: 8px 0;
+  padding: 12px 0;
+  box-shadow: none;
 }
 
-.search-input::placeholder {
+.booking-search-form .search-input::placeholder {
   color: var(--color-text-tertiary);
+  font-size: 18px;
 }
 
 .search-actions {
