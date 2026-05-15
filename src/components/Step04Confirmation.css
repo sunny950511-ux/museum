@@ -135,7 +135,7 @@
 
 .fixed-bottom-actions .btn-prev {
   flex: 1;
-  height: 56px;
+  height: 64px;
   font-size: 18px;
   font-weight: 700;
   background: #f3f4f6;
@@ -146,10 +146,10 @@
 
 .fixed-bottom-actions .btn-confirm {
   flex: 2;
-  height: 56px;
+  height: 64px;
   font-size: 18px;
   font-weight: 700;
-  background: #003366; /* Primary 색상 통일 */
+  background: #003366;
   border: none;
   border-radius: 12px;
   color: #ffffff;
